@@ -40,40 +40,29 @@ export default function ProductList() {
                 )}
             </div>
           </div>
-          <div className="main-content w-full grid grid-cols-12 lg:gap-x-10 sm:gap-x-6 lg:gap-y-8 gap-y-9 lg:px-[3.125rem] sm:px-[1.5rem] px-[1.25rem] lg:py-[3rem] py-[2rem]  ">
-            <div className="cards lg:col-span-3 sm:col-span-6 md:col-span-4 col-span-12 border1">
+          <div className="main-content w-full grid grid-cols-12 lg:gap-x-8 sm:gap-x-6 lg:gap-y-6 gap-y-7 lg:px-[3.125rem] sm:px-[1.5rem] px-[1.25rem] lg:py-[3rem] py-[2rem]  ">
+            <div className="cards lg:col-span-2 sm:col-span-6 md:col-span-4 col-span-12 lg:min-h-[15rem] md:min-h-[10rem]  border1">
 
             </div>
-            <div className="cards lg:col-span-3 sm:col-span-6 md:col-span-4 col-span-12 border1">
+            <div className="cards lg:col-span-2 sm:col-span-6 md:col-span-4 col-span-12 lg:min-h-[15rem] md:min-h-[10rem]  border1">
 
             </div>
-            <div className="cards lg:col-span-3 sm:col-span-6 md:col-span-4 col-span-12 border1">
+            <div className="cards lg:col-span-2 sm:col-span-6 md:col-span-4 col-span-12 lg:min-h-[15rem] md:min-h-[10rem]  border1">
 
             </div>
-            <div className="cards lg:col-span-3 sm:col-span-6 md:col-span-4 col-span-12 border1">
+            <div className="cards lg:col-span-2 sm:col-span-6 md:col-span-4 col-span-12 lg:min-h-[15rem] md:min-h-[10rem]  border1">
 
             </div>
-            <div className="cards lg:col-span-3 sm:col-span-6 md:col-span-4 col-span-12 border1">
+            <div className="cards lg:col-span-2 sm:col-span-6 md:col-span-4 col-span-12 lg:min-h-[15rem] md:min-h-[10rem]  border1">
 
             </div>
-            <div className="cards lg:col-span-3 sm:col-span-6 md:col-span-4 col-span-12 border1">
+            <div className="cards lg:col-span-2 sm:col-span-6 md:col-span-4 col-span-12 lg:min-h-[15rem] md:min-h-[10rem]  border1">
 
             </div>
-            <div className="cards lg:col-span-3 sm:col-span-6 md:col-span-4 col-span-12 border1">
+            <div className="cards lg:col-span-2 sm:col-span-6 md:col-span-4 col-span-12 lg:min-h-[15rem] md:min-h-[10rem]  border1">
 
             </div>
-            <div className="cards lg:col-span-3 sm:col-span-6 md:col-span-4 col-span-12 border1">
-
-            </div>
-            <div className="cards lg:col-span-3 sm:col-span-6 md:col-span-4 col-span-12 border1">
-
-            </div>
-            <div className="cards lg:col-span-3 sm:col-span-6 md:col-span-4 col-span-12 border1">
-
-            </div>
-            <div className="cards lg:col-span-3 sm:col-span-6 md:col-span-4 col-span-12 border1">
-
-            </div>
+            
           </div>
         </div>
       </section>

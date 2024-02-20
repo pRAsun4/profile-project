@@ -15,13 +15,13 @@ function LandingPage() {
   return (
     <>
       <section
-        className="landing-section flex  justify-center w-full min-h-dvh bg-no-repeat bg-cover overflow-scroll sm:overflow-auto scroll-smooth border1"
+        className="landing-section flex  justify-center w-full min-h-dvh bg-no-repeat bg-cover overflow-scroll sm:overflow-auto scroll-smooth "
         style={{
           backgroundImage: `url(${BackgroundImg})`,
           backgroundPosition: "center center",
         }}
       >
-        <div className="search flex flex-col lg:gap-6 gap-4  container mx-auto items-center h-fit mt-8 border1">
+        <div className="search flex flex-col lg:gap-6 gap-4  container mx-auto items-center h-fit mt-8 ">
           <div className="lg:max-w-[57.2rem] w-full h-auto relative">
             <input
               type="text"
