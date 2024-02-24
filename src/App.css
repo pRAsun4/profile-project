@@ -12,6 +12,11 @@ h6 {
   font-style: normal;
   font-weight: 400;
 }
+p{
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
 
 input {
   border: 1px solid #00000080;
