@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 
 import Loader from "./Loader";
 import { Link } from "react-router-dom";
@@ -7,29 +7,28 @@ export default function TrendSuggestion() {
   const popularSuggestion = [
     {
       id: 0,
-      name: "Striped shirt dress"
+      name: "Striped shirt dress",
     },
     {
       id: 1,
-      name: "Satin shirts"
+      name: "Satin shirts",
     },
     {
       id: 2,
-      name: "Denim jumpsuit"
+      name: "Denim jumpsuit",
     },
     {
       id: 3,
-      name: "Leather dresses"
+      name: "Leather dresses",
     },
     {
       id: 4,
-      name: "Solid tshirts"
-    }
-    
-  ]
+      name: "Solid tshirts",
+    },
+  ];
   const [catagories, setCatagories] = useState([]);
   const [loader, setLoader] = useState(true);
-  const [popularSuggestions, setPopularSuggestions] = useState(popularSuggestion);
+  const [popularSuggestions, setPopularSuggestions] = useState([]);
 
   // console.log(popularSuggestions);
   const fetchData = async () => {
@@ -50,12 +49,14 @@ export default function TrendSuggestion() {
   };
 
   
+
   useEffect(() => {
     fetchData();
-    const interval = setInterval(popularSuggestion, 3000);
-    // return clearInterval(interval)
+    const interval = setTimeout(()=>{
+      setPopularSuggestions(popularSuggestion);
+    }, 2000);
+    return ()=> clearInterval(interval)
 
-    console.log(interval);
   }, []);
 
   return (
@@ -64,7 +65,7 @@ export default function TrendSuggestion() {
         <h2 className="text-[#000000] text-[2rem] ">Latest Trend</h2>
         <div className="w-full h-auto grid grid-cols-12 gap-4">
           <div className="hidden lg:block col-span-1"></div>
-          
+
           {loader ? (
             <Loader />
           ) : (
@@ -74,17 +75,34 @@ export default function TrendSuggestion() {
                 <Link
                   className="w-full h-auto lg:col-span-2 sm:col-span-6 md:col-span-4 col-span-12 rounded-[0.25rem] "
                   key={id}
-                  to={`/product-page/${id +1}/products`}
+                  to={`/product-page/${id + 1}/products`}
                 >
                   <div className="w-full h-auto flex flex-col ">
-                    <img src={item.image} alt="" className="rounded-[0.25rem] sm:mb-[0.625rem] mb-[0.425rem] "/>
-                    <p className="text-[1.3rem] text-left">{item.name}</p>
+                    <img
+                      src={item.image}
+                      alt=""
+                      className="rounded-[0.25rem] sm:mb-[0.625rem] mb-[0.425rem] "
+                    />
+                    <p className="text-[1rem] text-left">{item.name}</p>
                   </div>
                 </Link>
               );
             })
           )}
           <div className="hidden lg:block col-span-1 "></div>
+        </div>
+        <div className="mt-4">
+          <h2 className="text-[#000000] text-[2rem]">Popular Suggestions</h2>
+          <div className="flex flex-wrap ">
+            {popularSuggestions.map((suggestion) => (
+              <div
+                key={suggestion.id}
+                className="bg-gray-200 px-2 py-1 m-1 rounded cursor-pointer"
+              >
+                {suggestion.name}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>
